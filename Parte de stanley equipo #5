@@ -1,0 +1,61 @@
+# Seminario-3--Arboles-AVL-equipos-4-y-5
+Trabaho Final
+// Funcion para eliminar el nodo  
+(Void eliminar Nodo* nodo Eliminar){
+if (nodo Eliminar-> izq && nodo Eliminar -> der){
+Nodo* menor = minimo (nodoEliminar->); // Primero iras a la derecha 
+nodo Eliminar->dato	= menor-> dato;
+eliminar Nodo(menor);
+}
+	
+	
+	else if (nodoEliminar->izq)
+	{
+		reemplazar(nodo Eliminar, nodoEliminar->izq);
+		destruir Nodo(nodo Eliminar);
+		
+		
+		
+		
+	}
+		else if (nodoEliminar->der)
+	{
+		reemplazar(nodo Eliminar, nodoEliminar->der);
+		destruir Nodo(nodo Eliminar);
+		
+		
+		
+		
+	}
+	else{ // No tienes hijos 
+	reemplazar(nodo Eliminar , NULL);
+	destruir Nodo(nodo Eliminar );
+	
+	
+	
+	}
+	
+	// Funcion Para determinar el nodo mas izquierdo posible 
+	Nodo* minimo(Nodo* arbol){
+		if(arbol==NULL){
+			return NULL;
+			
+		}
+		if (arbol->izq){// Si tiene hijo izquierdo 
+		return minimo (arbol->izq); // retorna el hijo izquierdo 
+		}
+		else { // Si no tiene hijo izquierdo (Significa que el es el mas izquierdo)
+		return arbol; // se retorna si mismo 
+		}
+		
+	}
+}
+	
+	
+	
+	
+	
+	
+	
+}
+}
